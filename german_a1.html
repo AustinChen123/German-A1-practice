@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deutsche Grammatik A1 - Intelligentes Lernsystem</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .nav-tabs {
+        display: flex;
+        background: #f8f9fa;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      .nav-tab {
+        flex: 1;
+        padding: 15px;
+        text-align: center;
+        background: #f8f9fa;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        color: #666;
+      }
+
+      .nav-tab.active {
+        background: white;
+        color: #4ecdc4;
+        border-bottom: 3px solid #4ecdc4;
+      }
+
+      .nav-tab:hover {
+        background: #e9ecef;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 30px;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .controls {
+        padding: 20px 30px;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .control-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #4ecdc4, #44a08d);
+        color: white;
+      }
+
+      .btn-secondary {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+      }
+
+      .btn-success {
+        background: linear-gradient(45deg, #11998e, #38ef7d);
+        color: white;
+      }
+
+      .btn-warning {
+        background: linear-gradient(45deg, #f093fb, #f5576c);
+        color: white;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .exercise-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-left: 5px solid #4ecdc4;
+        transition: transform 0.3s ease;
+      }
+
+      .exercise-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .exercise-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .question {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+        flex: 1;
+      }
+
+      .difficulty {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      .difficulty.basic {
+        background: #d4edda;
+        color: #155724;
+      }
+      .difficulty.intermediate {
+        background: #fff3cd;
+        color: #856404;
+      }
+      .difficulty.advanced {
+        background: #f8d7da;
+        color: #721c24;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+      }
+
+      input[type="text"] {
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        min-width: 120px;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #4ecdc4;
+        box-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+      }
+
+      .multiple-choice {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .choice-option {
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        background: white;
+      }
+
+      .choice-option:hover {
+        border-color: #4ecdc4;
+        background: #f0fdff;
+      }
+
+      .choice-option.selected {
+        border-color: #4ecdc4;
+        background: #e6fffa;
+        font-weight: bold;
+      }
+
+      .check-btn {
+        background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .check-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+      }
+
+      .feedback {
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        display: none;
+      }
+
+      .correct {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      .explanation {
+        background: #e3f2fd;
+        color: #0d47a1;
+        border: 1px solid #bbdefb;
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+
+      .progress-bar {
+        background: #e0e0e0;
+        height: 8px;
+        border-radius: 4px;
+        margin: 20px 0;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        background: linear-gradient(45deg, #4ecdc4, #44a08d);
+        height: 100%;
+        width: 0%;
+        transition: width 0.5s ease;
+      }
+
+      .score {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      .stats-card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-left: 5px solid #4ecdc4;
+      }
+
+      .stats-card h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+
+      .stats-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .stats-label {
+        font-weight: 500;
+        color: #666;
+      }
+
+      .stats-value {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .weakness-indicator {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        margin-left: 10px;
+      }
+
+      .weakness-high {
+        background: #ffebee;
+        color: #c62828;
+      }
+      .weakness-medium {
+        background: #fff3e0;
+        color: #ef6c00;
+      }
+      .weakness-low {
+        background: #e8f5e8;
+        color: #2e7d32;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+
+      .session-summary {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .session-summary h3 {
+        margin-bottom: 15px;
+        font-size: 1.5em;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+
+      .summary-item {
+        text-align: center;
+      }
+
+      .summary-number {
+        font-size: 2em;
+        font-weight: bold;
+        display: block;
+      }
+
+      .summary-label {
+        opacity: 0.9;
+        font-size: 0.9em;
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      .status {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 6px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .status.success {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .status.error {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      .status.info {
+        background: #d1ecf1;
+        color: #0c5460;
+        border: 1px solid #bee5eb;
+      }
+
+      .welcome-message {
+        text-align: center;
+        padding: 40px;
+      }
+
+      .welcome-box {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .welcome-features {
+        text-align: left;
+        margin-top: 15px;
+      }
+
+      .welcome-features p {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🇩🇪 Deutsche Grammatik</h1>
+        <p>A1 Niveau - Intelligente Lernanalyse & Gezieltes Training</p>
+      </div>
+
+      <div class="nav-tabs">
+        <button class="nav-tab active" onclick="switchTab('practice')">
+          🎯 Übungen
+        </button>
+        <button class="nav-tab" onclick="switchTab('analysis')">
+          📊 Einzelanalyse
+        </button>
+        <button class="nav-tab" onclick="switchTab('overall')">
+          📈 Gesamtanalyse
+        </button>
+        <button class="nav-tab" onclick="switchTab('targeted')">
+          🎪 Gezieltes Training
+        </button>
+      </div>
+
+      <!-- Practice Tab -->
+      <div id="practice-tab" class="tab-content active">
+        <div class="controls">
+          <div class="control-group">
+            <button class="btn btn-primary" onclick="startNewSession()">
+              🚀 Neue Sitzung (25 Fragen)
+            </button>
+          </div>
+          <div class="control-group">
+            <input
+              type="file"
+              id="fileInput"
+              class="file-input"
+              accept=".json"
+              onchange="loadExternalFile()"
+            />
+            <button
+              class="btn btn-secondary"
+              onclick="document.getElementById('fileInput').click()"
+            >
+              📁 Datei laden
+            </button>
+          </div>
+          <div class="control-group">
+            <button class="btn btn-success" onclick="exportAllData()">
+              💾 Daten exportieren
+            </button>
+          </div>
+        </div>
+
+        <div id="status" class="status" style="display: none"></div>
+
+        <div class="score">
+          <span id="score">Richtige Antworten: 0/25</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div id="exerciseContainer">
+          <!-- Exercises will be loaded here -->
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-warning" onclick="resetSession()">
+            🔄 Sitzung zurücksetzen
+          </button>
+          <button class="btn btn-primary" onclick="finishSession()">
+            ✅ Sitzung beenden
+          </button>
+        </div>
+      </div>
+
+      <!-- Single Analysis Tab -->
+      <div id="analysis-tab" class="tab-content">
+        <div id="sessionSummary" class="session-summary" style="display: none">
+          <h3>📊 Sitzungsanalyse</h3>
+          <div id="summaryContent"></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stats-card">
+            <h3>📈 Kategorien-Performance</h3>
+            <div id="categoryStats"></div>
+          </div>
+
+          <div class="stats-card">
+            <h3>🎯 Schwierigkeitsstufen</h3>
+            <div id="difficultyStats"></div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stats-card">
+            <h3>❌ Häufige Fehler</h3>
+            <div id="errorAnalysis"></div>
+          </div>
+
+          <div class="stats-card">
+            <h3>💡 Verbesserungsvorschläge</h3>
+            <div id="recommendations"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overall Analysis Tab -->
+      <div id="overall-tab" class="tab-content">
+        <div class="stats-grid">
+          <div class="stats-card">
+            <h3>📊 Gesamtstatistiken</h3>
+            <div id="overallStats"></div>
+          </div>
+
+          <div class="stats-card">
+            <h3>📈 Lernfortschritt</h3>
+            <div id="progressStats"></div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stats-card">
+            <h3>🔍 Schwachstellen-Analyse</h3>
+            <div id="weaknessAnalysis"></div>
+          </div>
+
+          <div class="stats-card">
+            <h3>🏆 Stärken</h3>
+            <div id="strengthAnalysis"></div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-warning" onclick="clearAllData()">
+            🗑️ Alle Daten löschen
+          </button>
+          <button class="btn btn-success" onclick="exportDetailedAnalysis()">
+            📋 Detailanalyse exportieren
+          </button>
+        </div>
+      </div>
+
+      <!-- Targeted Training Tab -->
+      <div id="targeted-tab" class="tab-content">
+        <div class="stats-card">
+          <h3>🎯 Empfohlenes Training</h3>
+          <div id="trainingRecommendations"></div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-warning" onclick="startWeaknessTraining()">
+            ❌ Schwachstellen trainieren
+          </button>
+          <button class="btn btn-primary" onclick="startMixedTraining()">
+            🔄 Gemischtes Training
+          </button>
+          <button class="btn btn-success" onclick="startProgressiveTraining()">
+            📈 Progressives Training
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Sample exercises (25 questions for demonstration)
+      const BUILT_IN_EXERCISES = [
+        // ARTIKEL (10 exercises)
+        {
+          id: 1,
+          category: "artikel",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie den richtigen Artikel:",
+          template: "___ Mann ist groß.",
+          answers: ["der"],
+          explanation:
+            "Explanation: 'Mann' is masculine (der Mann). In Nominativ: der Mann.",
+        },
+        {
+          id: 2,
+          category: "artikel",
+          difficulty: "basic",
+          type: "multiple_choice",
+          question: "Welcher Artikel ist richtig?",
+          template: "___ Sonne scheint heute.",
+          choices: ["Der", "Die", "Das", "Den"],
+          answers: ["die"],
+          explanation:
+            "Explanation: 'Sonne' is feminine, so the correct article is 'die'.",
+        },
+        {
+          id: 3,
+          category: "artikel",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie den Artikel:",
+          template: "___ Katze schläft.",
+          answers: ["die"],
+          explanation: "Explanation: 'Katze' is feminine → die Katze.",
+        },
+        {
+          id: 4,
+          category: "artikel",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie den Artikel:",
+          template: "___ Haus ist schön.",
+          answers: ["das"],
+          explanation: "Explanation: 'Haus' is neuter → das Haus.",
+        },
+        {
+          id: 5,
+          category: "artikel",
+          difficulty: "basic",
+          type: "multiple_choice",
+          question: "Welcher Artikel passt?",
+          template: "___ Wetter ist heute schlecht.",
+          choices: ["Der", "Die", "Das", "Den"],
+          answers: ["das"],
+          explanation: "Explanation: 'Wetter' is neuter → das Wetter.",
+        },
+        {
+          id: 6,
+          category: "artikel",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie den unbestimmten Artikel:",
+          template: "Ich möchte ___ Apfel kaufen.",
+          answers: ["einen"],
+          explanation:
+            "Explanation: 'der Apfel' in Akkusativ becomes 'einen Apfel'.",
+        },
+        {
+          id: 7,
+          category: "artikel",
+          difficulty: "intermediate",
+          type: "fill",
+          question: "Ergänzen Sie den Artikel:",
+          template: "___ Mädchen spielt im Garten.",
+          answers: ["das"],
+          explanation:
+            "Explanation: 'Mädchen' is neuter despite referring to a female person.",
+        },
+        {
+          id: 8,
+          category: "artikel",
+          difficulty: "intermediate",
+          type: "multiple_choice",
+          question: "Welcher Artikel ist richtig?",
+          template: "___ Buch liegt auf dem Tisch.",
+          choices: ["Der", "Die", "Das", "Den"],
+          answers: ["das"],
+          explanation: "Explanation: 'Buch' is neuter, therefore 'das Buch'.",
+        },
+        {
+          id: 9,
+          category: "artikel",
+          difficulty: "intermediate",
+          type: "fill",
+          question: "Ergänzen Sie den Artikel im Akkusativ:",
+          template: "Ich lese ___ Zeitung.",
+          answers: ["die"],
+          explanation:
+            "Explanation: 'die Zeitung' doesn't change in Akkusativ (feminine).",
+        },
+        {
+          id: 10,
+          category: "artikel",
+          difficulty: "advanced",
+          type: "fill",
+          question: "Ergänzen Sie den Artikel im Genitiv:",
+          template: "Das Dach ___ Hauses ist rot. (das Haus)",
+          answers: ["des"],
+          explanation:
+            "Explanation: Genitive neuter: 'das Haus' → 'des Hauses'.",
+        },
+
+        // KASUS (8 exercises)
+        {
+          id: 11,
+          category: "kasus",
+          difficulty: "basic",
+          type: "fill",
+          question: "Setzen Sie den Akkusativ ein:",
+          template: "Ich sehe ___ Hund. (der Hund)",
+          answers: ["den"],
+          explanation:
+            "Explanation: Direct object requires Akkusativ. 'der Hund' becomes 'den Hund'.",
+        },
+        {
+          id: 12,
+          category: "kasus",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie den Dativ:",
+          template: "Ich gebe ___ Frau ein Buch. (die Frau)",
+          answers: ["der"],
+          explanation:
+            "Explanation: 'geben' requires Dativ. 'die Frau' becomes 'der Frau'.",
+        },
+        {
+          id: 13,
+          category: "kasus",
+          difficulty: "intermediate",
+          type: "fill",
+          question: "Ergänzen Sie den Akkusativ:",
+          template: "Er kauft ___ Brot. (das Brot)",
+          answers: ["das"],
+          explanation:
+            "Explanation: Neuter nouns don't change in Akkusativ. 'das Brot' stays 'das Brot'.",
+        },
+        {
+          id: 14,
+          category: "kasus",
+          difficulty: "intermediate",
+          type: "fill",
+          question: "Setzen Sie den Dativ ein:",
+          template: "Sie hilft ___ Kind. (das Kind)",
+          answers: ["dem"],
+          explanation:
+            "Explanation: 'helfen' requires Dativ. 'das Kind' becomes 'dem Kind'.",
+        },
+        {
+          id: 15,
+          category: "kasus",
+          difficulty: "advanced",
+          type: "fill",
+          question: "Ergänzen Sie den Genitiv:",
+          template: "Das Auto ___ Mannes ist blau. (der Mann)",
+          answers: ["des"],
+          explanation: "Explanation: Genitive of 'der Mann' is 'des Mannes'.",
+        },
+        {
+          id: 16,
+          category: "kasus",
+          difficulty: "basic",
+          type: "fill",
+          question: "Nach welchem Kasus fragen Sie?",
+          template: "Ich gehe zu ___ Arzt. (der Arzt)",
+          answers: ["dem"],
+          explanation:
+            "Explanation: 'zu' requires Dativ. 'der Arzt' → 'dem Arzt'.",
+        },
+        {
+          id: 17,
+          category: "kasus",
+          difficulty: "intermediate",
+          type: "multiple_choice",
+          question: "Welcher Kasus ist nach 'mit' richtig?",
+          template: "Ich fahre mit ___ Auto.",
+          choices: ["das", "dem", "den", "der"],
+          answers: ["dem"],
+          explanation:
+            "Explanation: 'mit' always requires Dativ. 'das Auto' → 'dem Auto'.",
+        },
+        {
+          id: 18,
+          category: "kasus",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie den Akkusativ:",
+          template: "Wir besuchen ___ Museum. (das Museum)",
+          answers: ["das"],
+          explanation:
+            "Explanation: Neuter articles don't change in Akkusativ.",
+        },
+
+        // VERBEN (4 exercises)
+        {
+          id: 19,
+          category: "verben",
+          difficulty: "basic",
+          type: "multiple_choice",
+          question: "Wählen Sie das richtige Reflexivpronomen:",
+          template: "Du wäschst ___ die Hände.",
+          choices: ["dich", "dir", "sich", "mir"],
+          answers: ["dir"],
+          explanation: "Explanation: Reflexive pronoun for 'du' is 'dir'.",
+        },
+        {
+          id: 20,
+          category: "verben",
+          difficulty: "basic",
+          type: "fill",
+          question: "Konjugieren Sie das Verb:",
+          template: "Ich ___ nach Hause. (gehen)",
+          answers: ["gehe"],
+          explanation: "Explanation: 'gehen' conjugated for 'ich' is 'gehe'.",
+        },
+        {
+          id: 21,
+          category: "verben",
+          difficulty: "intermediate",
+          type: "fill",
+          question: "Setzen Sie das passende Wort ein:",
+          template: "Wir gehen ins Kino, ___ einen Film zu sehen.",
+          answers: ["um"],
+          explanation: "Explanation: 'um ... zu' expresses purpose.",
+        },
+        {
+          id: 22,
+          category: "verben",
+          difficulty: "basic",
+          type: "fill",
+          question: "Antworten Sie mit 'doch':",
+          template: "Sprichst du nicht Deutsch? - ___, ich spreche Deutsch.",
+          answers: ["doch"],
+          explanation: "Explanation: 'doch' contradicts negative questions.",
+        },
+
+        // MODALVERBEN (2 exercises)
+        {
+          id: 23,
+          category: "modalverben",
+          difficulty: "basic",
+          type: "fill",
+          question: "Ergänzen Sie das Modalverb:",
+          template: "Ich ___ Deutsch sprechen. (können)",
+          answers: ["kann"],
+          explanation: "Explanation: 'können' for 'ich' is 'kann'.",
+        },
+        {
+          id: 24,
+          category: "modalverben",
+          difficulty: "basic",
+          type: "fill",
+          question: "Setzen Sie das Modalverb ein:",
+          template: "Du ___ pünktlich sein. (müssen)",
+          answers: ["musst"],
+          explanation: "Explanation: 'müssen' for 'du' is 'musst'.",
+        },
+
+        // TRENNBAR (1 exercise)
+        {
+          id: 25,
+          category: "trennbar",
+          difficulty: "intermediate",
+          type: "multi_fill",
+          question: "Konjugieren Sie das trennbare Verb:",
+          template: "Ich ___ um 7 Uhr ___. (aufstehen)",
+          answers: ["stehe", "auf"],
+          explanation: "Explanation: 'aufstehen' splits: 'Ich stehe ... auf'.",
+        },
+      ];
+
+      // Global variables
+      let exercises = [...BUILT_IN_EXERCISES];
+      let currentExercises = [];
+      let currentSession = null;
+      let analytics = null;
+      let userAnswers = {};
+      let checkedAnswers = {};
+
+      // Learning Analytics System
+      class LearningAnalytics {
+        constructor() {
+          this.loadData();
+        }
+
+        loadData() {
+          this.sessionHistory = JSON.parse(
+            localStorage.getItem("germanSessionHistory") || "[]"
+          );
+          this.overallStats = JSON.parse(
+            localStorage.getItem("germanOverallStats") ||
+              JSON.stringify(this.getDefaultStats())
+          );
+          this.weaknessData = JSON.parse(
+            localStorage.getItem("germanWeaknessData") || "{}"
+          );
+        }
+
+        saveData() {
+          localStorage.setItem(
+            "germanSessionHistory",
+            JSON.stringify(this.sessionHistory)
+          );
+          localStorage.setItem(
+            "germanOverallStats",
+            JSON.stringify(this.overallStats)
+          );
+          localStorage.setItem(
+            "germanWeaknessData",
+            JSON.stringify(this.weaknessData)
+          );
+        }
+
+        getDefaultStats() {
+          return {
+            totalSessions: 0,
+            totalQuestions: 0,
+            totalCorrect: 0,
+            categoryStats: {},
+            difficultyStats: {},
+            lastSessionDate: null,
+            averageScore: 0,
+            improvementTrend: [],
+          };
+        }
+
+        recordSession(sessionData) {
+          this.sessionHistory.push({
+            ...sessionData,
+            timestamp: new Date().toISOString(),
+            sessionId: Date.now(),
+          });
+
+          this.updateOverallStats(sessionData);
+          this.updateWeaknessData(sessionData);
+          this.saveData();
+        }
+
+        updateOverallStats(sessionData) {
+          this.overallStats.totalSessions++;
+          this.overallStats.totalQuestions += sessionData.totalQuestions;
+          this.overallStats.totalCorrect += sessionData.correctAnswers;
+          this.overallStats.lastSessionDate = new Date().toISOString();
+          this.overallStats.averageScore = (
+            (this.overallStats.totalCorrect /
+              this.overallStats.totalQuestions) *
+            100
+          ).toFixed(1);
+
+          // 修正：統一處理類別統計
+          sessionData.exercises.forEach((ex) => {
+            if (!this.overallStats.categoryStats[ex.category]) {
+              this.overallStats.categoryStats[ex.category] = {
+                total: 0,
+                correct: 0,
+              };
+            }
+            this.overallStats.categoryStats[ex.category].total++;
+            if (ex.correct)
+              this.overallStats.categoryStats[ex.category].correct++;
+          });
+
+          // 修正：統一處理難度統計，並移除重複代碼
+          sessionData.exercises.forEach((ex) => {
+            if (!this.overallStats.difficultyStats[ex.difficulty]) {
+              this.overallStats.difficultyStats[ex.difficulty] = {
+                total: 0,
+                correct: 0,
+              };
+            }
+            this.overallStats.difficultyStats[ex.difficulty].total++;
+            if (ex.correct)
+              this.overallStats.difficultyStats[ex.difficulty].correct++;
+          });
+
+          const score = (
+            (sessionData.correctAnswers / sessionData.totalQuestions) *
+            100
+          ).toFixed(1);
+          this.overallStats.improvementTrend.push({
+            date: new Date().toISOString().split("T")[0],
+            score: parseFloat(score),
+          });
+
+          if (this.overallStats.improvementTrend.length > 20) {
+            this.overallStats.improvementTrend =
+              this.overallStats.improvementTrend.slice(-20);
+          }
+        }
+
+        updateWeaknessData(sessionData) {
+          sessionData.exercises.forEach((ex) => {
+            const key = `${ex.category}_${ex.difficulty}`;
+            if (!this.weaknessData[key]) {
+              this.weaknessData[key] = {
+                attempts: 0,
+                correct: 0,
+                lastErrors: [],
+              };
+            }
+
+            this.weaknessData[key].attempts++;
+            if (ex.correct) {
+              this.weaknessData[key].correct++;
+            } else {
+              this.weaknessData[key].lastErrors.push({
+                questionId: ex.id,
+                timestamp: new Date().toISOString(),
+                userAnswer: ex.userAnswer || "",
+                correctAnswer: ex.correctAnswer || "",
+              });
+
+              if (this.weaknessData[key].lastErrors.length > 5) {
+                this.weaknessData[key].lastErrors =
+                  this.weaknessData[key].lastErrors.slice(-5);
+              }
+            }
+          });
+        }
+
+        getWeakestAreas() {
+          const areas = [];
+
+          // 檢查 weaknessData 是否存在
+          if (!this.weaknessData || typeof this.weaknessData !== "object") {
+            return areas;
+          }
+
+          Object.keys(this.weaknessData).forEach((key) => {
+            const data = this.weaknessData[key];
+
+            // 驗證數據完整性
+            if (
+              !data ||
+              typeof data.attempts !== "number" ||
+              typeof data.correct !== "number"
+            ) {
+              return;
+            }
+
+            // 確保有足夠的嘗試次數和準確率低於閾值
+            if (data.attempts >= 3 && data.correct >= 0) {
+              const accuracy = data.correct / data.attempts;
+
+              if (accuracy < 0.7) {
+                const keyParts = key.split("_");
+                if (keyParts.length >= 2) {
+                  const [category, difficulty] = keyParts;
+                  areas.push({
+                    category,
+                    difficulty,
+                    accuracy: parseFloat((accuracy * 100).toFixed(1)),
+                    attempts: data.attempts,
+                    errors: data.lastErrors ? data.lastErrors.length : 0,
+                  });
+                }
+              }
+            }
+          });
+
+          return areas.sort((a, b) => a.accuracy - b.accuracy);
+        }
+
+        getStrongestAreas() {
+          const areas = [];
+
+          // 檢查 weaknessData 是否存在
+          if (!this.weaknessData || typeof this.weaknessData !== "object") {
+            return areas;
+          }
+
+          Object.keys(this.weaknessData).forEach((key) => {
+            const data = this.weaknessData[key];
+
+            // 驗證數據完整性
+            if (
+              !data ||
+              typeof data.attempts !== "number" ||
+              typeof data.correct !== "number"
+            ) {
+              return;
+            }
+
+            // 確保有足夠的嘗試次數和準確率高於閾值
+            if (data.attempts >= 5 && data.correct >= 0) {
+              const accuracy = data.correct / data.attempts;
+
+              if (accuracy >= 0.8) {
+                const keyParts = key.split("_");
+                if (keyParts.length >= 2) {
+                  const [category, difficulty] = keyParts;
+                  areas.push({
+                    category,
+                    difficulty,
+                    accuracy: parseFloat((accuracy * 100).toFixed(1)),
+                    attempts: data.attempts,
+                  });
+                }
+              }
+            }
+          });
+
+          return areas.sort((a, b) => b.accuracy - a.accuracy);
+        }
+
+        generateRecommendations() {
+          const recommendations = [];
+
+          try {
+            const weakAreas = this.getWeakestAreas();
+            const strongAreas = this.getStrongestAreas();
+
+            // 檢查最弱領域
+            if (weakAreas && weakAreas.length > 0) {
+              const weakest = weakAreas[0];
+              if (weakest && weakest.category && weakest.difficulty) {
+                recommendations.push({
+                  type: "focus",
+                  priority: "high",
+                  message: `Konzentrieren Sie sich auf ${this.getCategoryName(
+                    weakest.category
+                  )} (${this.getDifficultyName(
+                    weakest.difficulty
+                  )}). Aktuelle Genauigkeit: ${weakest.accuracy}%`,
+                  category: weakest.category,
+                  difficulty: weakest.difficulty,
+                });
+              }
+            }
+
+            // 檢查總體表現
+            if (
+              this.overallStats &&
+              typeof this.overallStats.averageScore === "string"
+            ) {
+              const avgScore = parseFloat(this.overallStats.averageScore);
+
+              if (!isNaN(avgScore) && avgScore < 60) {
+                recommendations.push({
+                  type: "basics",
+                  priority: "high",
+                  message:
+                    "Wiederholen Sie die Grundlagen. Konzentrieren Sie sich auf einfache Übungen.",
+                  suggestion: "basic_training",
+                });
+              }
+
+              // 檢查是否可以挑戰更高難度
+              if (
+                strongAreas &&
+                strongAreas.length > 0 &&
+                !isNaN(avgScore) &&
+                avgScore > 75
+              ) {
+                recommendations.push({
+                  type: "challenge",
+                  priority: "medium",
+                  message:
+                    "Sie machen gute Fortschritte! Versuchen Sie schwierigere Übungen.",
+                  suggestion: "advanced_training",
+                });
+              }
+            }
+
+            // 添加通用建議
+            if (recommendations.length === 0) {
+              recommendations.push({
+                type: "general",
+                priority: "low",
+                message:
+                  "Führen Sie mehr Übungen durch, um personalisierte Empfehlungen zu erhalten.",
+                suggestion: "continue_practice",
+              });
+            }
+          } catch (error) {
+            console.warn("Error generating recommendations:", error);
+            recommendations.push({
+              type: "error",
+              priority: "low",
+              message:
+                "Empfehlungen können derzeit nicht generiert werden. Weiter üben!",
+              suggestion: "continue_practice",
+            });
+          }
+
+          return recommendations;
+        }
+
+        getCategoryName(category) {
+          const names = {
+            artikel: "Artikel",
+            kasus: "Kasus",
+            verben: "Verben",
+            possessiv: "Possessivpronomen",
+            modalverben: "Modalverben",
+            trennbar: "Trennbare Verben",
+            perfekt: "Perfekt",
+            plural: "Plural",
+          };
+          return names[category] || category;
+        }
+
+        getDifficultyName(difficulty) {
+          const names = {
+            basic: "Grundstufe",
+            intermediate: "Mittelstufe",
+            advanced: "Fortgeschritten",
+          };
+          return names[difficulty] || difficulty;
+        }
+
+        clearAllData() {
+          this.sessionHistory = [];
+          this.overallStats = this.getDefaultStats();
+          this.weaknessData = {};
+          this.saveData();
+        }
+      }
+
+      // Initialize system
+      function init() {
+        userAnswers = {};
+        checkedAnswers = {};
+        currentSession = null;
+        currentExercises = [];
+        analytics = new LearningAnalytics();
+        exercises = [...BUILT_IN_EXERCISES];
+
+        updateWelcomeMessage();
+        showStatus(
+          `✅ System bereit! ${exercises.length} Übungen geladen.`,
+          "success"
+        );
+      }
+
+      function updateWelcomeMessage() {
+        const container = document.getElementById("exerciseContainer");
+        if (!container) return;
+
+        container.innerHTML = `
+        <div class="welcome-message">
+            <h2>🎯 Willkommen zum Intelligenten Deutschen Grammatiktrainer!</h2>
+            <div class="welcome-box">
+                <h3>🚀 So funktioniert's:</h3>
+                <div class="welcome-features">
+                    <p>✅ <strong>25 zufällige Fragen</strong> pro Sitzung</p>
+                    <p>📊 <strong>Intelligente Analyse</strong> Ihrer Schwachstellen</p>
+                    <p>🎯 <strong>Gezieltes Training</strong> für problematische Bereiche</p>
+                    <p>📈 <strong>Fortschritts-Tracking</strong> über alle Sitzungen</p>
+                    <p>💾 <strong>Offline-Funktionalität</strong> - funktioniert ohne Internet</p>
+                </div>
+            </div>
+            <p style="color: #666; font-size: 1.1em;">
+                Das System verfügt über <strong>${exercises.length} Übungen</strong> in 6 Kategorien.<br>
+                Klicken Sie auf "Neue Sitzung" um zu beginnen!
+            </p>
+        </div>
+    `;
+
+        if (analytics.overallStats.totalSessions > 0) {
+          container.innerHTML += `
+            <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; margin: 20px; text-align: center;">
+                <h3>📈 Ihre bisherigen Erfolge:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div><strong>${analytics.overallStats.totalSessions}</strong><br>Sitzungen</div>
+                    <div><strong>${analytics.overallStats.totalQuestions}</strong><br>Fragen beantwortet</div>
+                    <div><strong>${analytics.overallStats.averageScore}%</strong><br>Durchschnitt</div>
+                </div>
+            </div>
+        `;
+        }
+      }
+
+      // Session management
+      function startNewSession() {
+        if (exercises.length < 25) {
+          const available = exercises.length;
+          const shuffled = [...exercises].sort(() => 0.5 - Math.random());
+          currentExercises = shuffled.slice(0, available);
+          showStatus(
+            `⚠️ Nur ${available} Übungen verfügbar. Sitzung mit ${available} Fragen gestartet.`,
+            "info"
+          );
+        } else {
+          const shuffled = [...exercises].sort(() => 0.5 - Math.random());
+          currentExercises = shuffled.slice(0, 25);
+        }
+
+        currentSession = {
+          exercises: currentExercises.map((ex) => ({
+            id: ex.id,
+            category: ex.category,
+            difficulty: ex.difficulty,
+            question: ex.question,
+            answered: false,
+            correct: false,
+            userAnswer: "",
+            correctAnswer: ex.answers.join(" / "),
+          })),
+          startTime: new Date(),
+          totalQuestions: currentExercises.length,
+          correctAnswers: 0,
+        };
+
+        userAnswers = {};
+        checkedAnswers = {};
+        displayExercises();
+        showStatus(
+          `🚀 Neue Sitzung mit ${currentExercises.length} Fragen gestartet!`,
+          "success"
+        );
+      }
+
+      function displayExercises() {
+        const container = document.getElementById("exerciseContainer");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        currentExercises.forEach((exercise, index) => {
+          const exerciseDiv = document.createElement("div");
+          exerciseDiv.className = "exercise-card";
+          exerciseDiv.innerHTML = createExerciseHTML(exercise, index);
+          container.appendChild(exerciseDiv);
+        });
+
+        updateScore();
+      }
+
+      function createExerciseHTML(exercise, index) {
+        const difficultyClass = exercise.difficulty || "basic";
+        const difficultyText = {
+          basic: "Grundstufe",
+          intermediate: "Mittelstufe",
+          advanced: "Fortgeschritten",
+        }[difficultyClass];
+
+        let inputHTML = "";
+
+        if (exercise.type === "fill") {
+          const parts = exercise.template.split("___");
+          inputHTML = `<div class="input-group">`;
+          for (let i = 0; i < parts.length; i++) {
+            if (i > 0) {
+              inputHTML += `<input type="text" id="ex${index}_${
+                i - 1
+              }" placeholder="..." class="blank">`;
+            }
+            inputHTML += `<span class="sentence-part">${parts[i]}</span>`;
+          }
+          inputHTML += `</div>`;
+        } else if (exercise.type === "multi_fill") {
+          const parts = exercise.template.split("___");
+          inputHTML = `<div class="input-group">`;
+          for (let i = 0; i < parts.length; i++) {
+            if (i > 0) {
+              inputHTML += `<input type="text" id="ex${index}_${
+                i - 1
+              }" placeholder="..." class="blank">`;
+            }
+            inputHTML += `<span class="sentence-part">${parts[i]}</span>`;
+          }
+          inputHTML += `</div>`;
+        } else if (exercise.type === "multiple_choice") {
+          inputHTML = `
+            <div class="sentence-part">${exercise.template.replace(
+              "___",
+              "<strong>___</strong>"
+            )}</div>
+            <div class="multiple-choice" id="choices${index}">
+                ${exercise.choices
+                  .map(
+                    (choice, i) =>
+                      `<div class="choice-option" onclick="selectChoice(${index}, ${i}, '${choice}')">${choice}</div>`
+                  )
+                  .join("")}
+            </div>
+        `;
+        }
+
+        return `
+        <div class="exercise-header">
+            <div class="question">${index + 1}. ${exercise.question}</div>
+            <div class="difficulty ${difficultyClass}">${difficultyText}</div>
+        </div>
+        ${inputHTML}
+        <button class="check-btn" onclick="checkAnswer(${index})">Prüfen</button>
+        <div class="feedback" id="feedback${index}"></div>
+    `;
+      }
+
+      function selectChoice(exerciseIndex, choiceIndex, choice) {
+        const choices = document.querySelectorAll(
+          `#choices${exerciseIndex} .choice-option`
+        );
+        choices.forEach((c) => c.classList.remove("selected"));
+        choices[choiceIndex].classList.add("selected");
+        userAnswers[exerciseIndex] = [choice.toLowerCase()];
+      }
+
+      function normalizeAnswer(answer) {
+        return answer.toLowerCase().trim();
+      }
+
+      function checkAnswer(exerciseIndex) {
+        if (checkedAnswers[exerciseIndex]) {
+          return;
+        }
+
+        const exercise = currentExercises[exerciseIndex];
+        const feedback = document.getElementById(`feedback${exerciseIndex}`);
+        if (!feedback) return;
+
+        let userAnswer = [];
+        let isCorrect = false;
+
+        if (exercise.type === "multiple_choice") {
+          userAnswer = userAnswers[exerciseIndex] || [];
+        } else {
+          const answerCount = exercise.answers.length;
+          for (let i = 0; i < answerCount; i++) {
+            const input = document.getElementById(`ex${exerciseIndex}_${i}`);
+            if (input) {
+              userAnswer.push(normalizeAnswer(input.value));
+            }
+          }
+        }
+
+        if (userAnswer.length === exercise.answers.length) {
+          isCorrect = userAnswer.every(
+            (answer, i) => normalizeAnswer(exercise.answers[i]) === answer
+          );
+        }
+
+        feedback.style.display = "block";
+        checkedAnswers[exerciseIndex] = true;
+
+        if (isCorrect) {
+          feedback.className = "feedback correct";
+          feedback.innerHTML = `
+            ✅ Richtig!
+            <div class="explanation">${exercise.explanation}</div>
+        `;
+          if (currentSession) {
+            currentSession.correctAnswers++;
+            currentSession.exercises[exerciseIndex].correct = true;
+          }
+        } else {
+          feedback.className = "feedback incorrect";
+          const correctAnswerText = exercise.answers.join(" ... ");
+          feedback.innerHTML = `
+            ❌ Falsch. Richtige Antwort: <strong>${correctAnswerText}</strong>
+            <div class="explanation">${exercise.explanation}</div>
+        `;
+          if (currentSession) {
+            currentSession.exercises[exerciseIndex].userAnswer =
+              userAnswer.join(" / ");
+          }
+        }
+
+        updateScore();
+      }
+
+      function updateScore() {
+        const totalQuestions = currentExercises.length;
+        const checkedCount = Object.keys(checkedAnswers).length;
+        const correctCount = currentSession ? currentSession.correctAnswers : 0;
+
+        const scoreElement = document.getElementById("score");
+        const progressElement = document.getElementById("progressFill");
+
+        if (scoreElement) {
+          scoreElement.textContent = `Richtige Antworten: ${correctCount}/${totalQuestions} (${checkedCount} beantwortet)`;
+        }
+
+        if (progressElement) {
+          const percentage =
+            totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0;
+          progressElement.style.width = `${percentage}%`;
+        }
+      }
+
+      function finishSession() {
+        if (!currentSession) {
+          showStatus("Keine aktive Sitzung gefunden.", "error");
+          return;
+        }
+
+        currentSession.endTime = new Date();
+        currentSession.duration = Math.round(
+          (currentSession.endTime - currentSession.startTime) / 1000 / 60
+        );
+
+        let answeredCount = 0;
+        currentSession.exercises.forEach((ex, index) => {
+          if (checkedAnswers[index]) {
+            answeredCount++;
+            ex.answered = true;
+            const feedback = document.getElementById(`feedback${index}`);
+            ex.correct = feedback?.classList.contains("correct") || false;
+            if (ex.correct) currentSession.correctAnswers++;
+          }
+        });
+
+        currentSession.answeredQuestions = answeredCount;
+        currentSession.accuracy =
+          answeredCount > 0
+            ? ((currentSession.correctAnswers / answeredCount) * 100).toFixed(1)
+            : 0;
+
+        analytics.recordSession(currentSession);
+        showSessionSummary();
+        switchTab("analysis");
+      }
+
+      function showSessionSummary() {
+        const summaryDiv = document.getElementById("sessionSummary");
+        const contentDiv = document.getElementById("summaryContent");
+
+        if (!summaryDiv || !contentDiv) return;
+
+        const categoryBreakdown = {};
+        currentSession.exercises.forEach((ex) => {
+          if (!categoryBreakdown[ex.category]) {
+            categoryBreakdown[ex.category] = { total: 0, correct: 0 };
+          }
+          categoryBreakdown[ex.category].total++;
+          if (ex.correct) categoryBreakdown[ex.category].correct++;
+        });
+
+        let categoryHTML = "";
+        Object.keys(categoryBreakdown).forEach((cat) => {
+          const stats = categoryBreakdown[cat];
+          const percentage =
+            stats.total > 0
+              ? ((stats.correct / stats.total) * 100).toFixed(0)
+              : 0;
+          categoryHTML += `
+            <div class="summary-item">
+                <span class="summary-number">${percentage}%</span>
+                <span class="summary-label">${analytics.getCategoryName(
+                  cat
+                )}</span>
+            </div>
+        `;
+        });
+
+        contentDiv.innerHTML = `
+        <div class="summary-grid">
+            <div class="summary-item">
+                <span class="summary-number">${currentSession.correctAnswers}</span>
+                <span class="summary-label">Richtige Antworten</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-number">${currentSession.answeredQuestions}</span>
+                <span class="summary-label">Beantwortet</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-number">${currentSession.accuracy}%</span>
+                <span class="summary-label">Genauigkeit</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-number">${currentSession.duration}</span>
+                <span class="summary-label">Minuten</span>
+            </div>
+        </div>
+        <h4 style="margin-top: 20px;">Kategorie-Performance:</h4>
+        <div class="summary-grid" style="margin-top: 10px;">
+            ${categoryHTML}
+        </div>
+    `;
+
+        summaryDiv.style.display = "block";
+      }
+
+      function resetSession() {
+        if (
+          confirm("Möchten Sie wirklich die aktuelle Sitzung zurücksetzen?")
+        ) {
+          userAnswers = {};
+          checkedAnswers = {};
+          if (currentSession) {
+            currentSession.correctAnswers = 0;
+            currentSession.exercises.forEach((ex) => {
+              ex.answered = false;
+              ex.correct = false;
+              ex.userAnswer = "";
+            });
+          }
+
+          const inputs = document.querySelectorAll('input[type="text"]');
+          inputs.forEach((input) => (input.value = ""));
+
+          const choices = document.querySelectorAll(".choice-option");
+          choices.forEach((choice) => choice.classList.remove("selected"));
+
+          const feedbacks = document.querySelectorAll(".feedback");
+          feedbacks.forEach((feedback) => {
+            feedback.style.display = "none";
+          });
+
+          updateScore();
+          showStatus("Sitzung zurückgesetzt!", "info");
+        }
+      }
+
+      // Tab management
+      function switchTab(tabName) {
+        document.querySelectorAll(".tab-content").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        document.querySelectorAll(".nav-tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        const tabContent = document.getElementById(`${tabName}-tab`);
+        const tabButton = document.querySelector(
+          `[onclick="switchTab('${tabName}')"]`
+        );
+
+        if (tabContent) tabContent.classList.add("active");
+        if (tabButton) tabButton.classList.add("active");
+
+        if (tabName === "analysis") {
+          updateAnalysisTab();
+        } else if (tabName === "overall") {
+          updateOverallTab();
+        } else if (tabName === "targeted") {
+          updateTargetedTab();
+        }
+      }
+
+      function updateAnalysisTab() {
+        if (!currentSession) {
+          const categoryStatsElement = document.getElementById("categoryStats");
+          if (categoryStatsElement) {
+            categoryStatsElement.innerHTML =
+              "<p>Keine Sitzungsdaten verfügbar. Starten Sie eine neue Sitzung.</p>";
+          }
+          return;
+        }
+
+        const categoryStats = {};
+        const difficultyStats = {};
+
+        currentSession.exercises.forEach((ex) => {
+          if (ex.answered) {
+            if (!categoryStats[ex.category])
+              categoryStats[ex.category] = { total: 0, correct: 0 };
+            if (!difficultyStats[ex.difficulty])
+              difficultyStats[ex.difficulty] = { total: 0, correct: 0 };
+
+            categoryStats[ex.category].total++;
+            difficultyStats[ex.difficulty].total++;
+
+            if (ex.correct) {
+              categoryStats[ex.category].correct++;
+              difficultyStats[ex.difficulty].correct++;
+            }
+          }
+        });
+
+        let categoryHTML = "";
+        Object.keys(categoryStats).forEach((cat) => {
+          const stats = categoryStats[cat];
+          const percentage = ((stats.correct / stats.total) * 100).toFixed(1);
+          categoryHTML += `
+            <div class="stats-item">
+                <span class="stats-label">${analytics.getCategoryName(
+                  cat
+                )}</span>
+                <span class="stats-value">${stats.correct}/${
+            stats.total
+          } (${percentage}%)</span>
+            </div>
+        `;
+        });
+
+        const categoryStatsElement = document.getElementById("categoryStats");
+        if (categoryStatsElement) categoryStatsElement.innerHTML = categoryHTML;
+
+        let difficultyHTML = "";
+        Object.keys(difficultyStats).forEach((diff) => {
+          const stats = difficultyStats[diff];
+          const percentage = ((stats.correct / stats.total) * 100).toFixed(1);
+          difficultyHTML += `
+            <div class="stats-item">
+                <span class="stats-label">${analytics.getDifficultyName(
+                  diff
+                )}</span>
+                <span class="stats-value">${stats.correct}/${
+            stats.total
+          } (${percentage}%)</span>
+            </div>
+        `;
+        });
+
+        const difficultyStatsElement =
+          document.getElementById("difficultyStats");
+        if (difficultyStatsElement)
+          difficultyStatsElement.innerHTML = difficultyHTML;
+
+        const errors = currentSession.exercises.filter(
+          (ex) => ex.answered && !ex.correct
+        );
+        let errorHTML = "";
+        if (errors.length > 0) {
+          errors.forEach((ex) => {
+            errorHTML += `
+                <div class="stats-item">
+                    <span class="stats-label">${analytics.getCategoryName(
+                      ex.category
+                    )} ${analytics.getDifficultyName(ex.difficulty)}</span>
+                    <span class="stats-value">Frage ${ex.id}</span>
+                </div>
+            `;
+          });
+        } else {
+          errorHTML = "<p>Keine Fehler in dieser Sitzung! 🎉</p>";
+        }
+
+        const errorAnalysisElement = document.getElementById("errorAnalysis");
+        if (errorAnalysisElement) errorAnalysisElement.innerHTML = errorHTML;
+
+        const recommendations = analytics.generateRecommendations();
+        let recHTML = "";
+        if (recommendations.length > 0) {
+          recommendations.forEach((rec) => {
+            const priorityClass =
+              rec.priority === "high" ? "weakness-high" : "weakness-medium";
+            recHTML += `
+                <div class="stats-item">
+                    <span class="stats-label">${rec.message}</span>
+                    <span class="weakness-indicator ${priorityClass}">${rec.priority}</span>
+                </div>
+            `;
+          });
+        } else {
+          recHTML = "<p>Weiter so! Alle Bereiche sehen gut aus. 👍</p>";
+        }
+
+        const recommendationsElement =
+          document.getElementById("recommendations");
+        if (recommendationsElement) recommendationsElement.innerHTML = recHTML;
+      }
+
+      function updateOverallTab() {
+        const stats = analytics.overallStats;
+
+        const overallHTML = `
+        <div class="stats-item">
+            <span class="stats-label">Gesamte Sitzungen</span>
+            <span class="stats-value">${stats.totalSessions}</span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-label">Gesamte Fragen</span>
+            <span class="stats-value">${stats.totalQuestions}</span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-label">Richtige Antworten</span>
+            <span class="stats-value">${stats.totalCorrect}</span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-label">Durchschnittliche Punktzahl</span>
+            <span class="stats-value">${stats.averageScore}%</span>
+        </div>
+    `;
+
+        const overallStatsElement = document.getElementById("overallStats");
+        if (overallStatsElement) overallStatsElement.innerHTML = overallHTML;
+
+        const trend = stats.improvementTrend;
+        let progressHTML = "";
+        if (trend.length >= 2) {
+          const latest = trend[trend.length - 1].score;
+          const previous = trend[trend.length - 2].score;
+          const change = (latest - previous).toFixed(1);
+          const direction = change >= 0 ? "📈" : "📉";
+
+          progressHTML = `
+            <div class="stats-item">
+                <span class="stats-label">Letzte Sitzung</span>
+                <span class="stats-value">${latest}%</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-label">Veränderung</span>
+                <span class="stats-value">${direction} ${Math.abs(
+            change
+          )}%</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-label">Trend (${
+                  trend.length
+                } Sitzungen)</span>
+                <span class="stats-value">${
+                  trend.length >= 5 ? "Verfügbar" : "Sammle Daten..."
+                }</span>
+            </div>
+        `;
+        } else {
+          progressHTML =
+            "<p>Mehr Sitzungen erforderlich für Fortschrittsanalyse.</p>";
+        }
+
+        const progressStatsElement = document.getElementById("progressStats");
+        if (progressStatsElement) progressStatsElement.innerHTML = progressHTML;
+
+        const weakAreas = analytics.getWeakestAreas();
+        let weaknessHTML = "";
+        if (weakAreas.length > 0) {
+          weakAreas.forEach((area) => {
+            const severity =
+              parseFloat(area.accuracy) < 50
+                ? "weakness-high"
+                : parseFloat(area.accuracy) < 70
+                ? "weakness-medium"
+                : "weakness-low";
+            weaknessHTML += `
+                <div class="stats-item">
+                    <span class="stats-label">${analytics.getCategoryName(
+                      area.category
+                    )} (${analytics.getDifficultyName(area.difficulty)})</span>
+                    <span class="stats-value">${
+                      area.accuracy
+                    }% <span class="weakness-indicator ${severity}">${
+              area.attempts
+            } Versuche</span></span>
+                </div>
+            `;
+          });
+        } else {
+          weaknessHTML =
+            "<p>Keine signifikanten Schwachstellen erkannt! 🌟</p>";
+        }
+
+        const weaknessAnalysisElement =
+          document.getElementById("weaknessAnalysis");
+        if (weaknessAnalysisElement)
+          weaknessAnalysisElement.innerHTML = weaknessHTML;
+
+        const strongAreas = analytics.getStrongestAreas();
+        let strengthHTML = "";
+        if (strongAreas.length > 0) {
+          strongAreas.forEach((area) => {
+            strengthHTML += `
+                <div class="stats-item">
+                    <span class="stats-label">${analytics.getCategoryName(
+                      area.category
+                    )} (${analytics.getDifficultyName(area.difficulty)})</span>
+                    <span class="stats-value">${
+                      area.accuracy
+                    }% <span class="weakness-indicator weakness-low">${
+              area.attempts
+            } Versuche</span></span>
+                </div>
+            `;
+          });
+        } else {
+          strengthHTML =
+            "<p>Noch keine starken Bereiche identifiziert. Weiter üben! 💪</p>";
+        }
+
+        const strengthAnalysisElement =
+          document.getElementById("strengthAnalysis");
+        if (strengthAnalysisElement)
+          strengthAnalysisElement.innerHTML = strengthHTML;
+      }
+
+      function updateTargetedTab() {
+        const recommendations = analytics.generateRecommendations();
+        const weakAreas = analytics.getWeakestAreas();
+
+        let recHTML = "<h4>🎯 Personalisierte Empfehlungen:</h4>";
+
+        if (recommendations.length > 0) {
+          recommendations.forEach((rec) => {
+            const priorityClass =
+              rec.priority === "high" ? "weakness-high" : "weakness-medium";
+            recHTML += `
+                <div class="stats-item">
+                    <span class="stats-label">${rec.message}</span>
+                    <span class="weakness-indicator ${priorityClass}">${rec.priority.toUpperCase()}</span>
+                </div>
+            `;
+          });
+        }
+
+        if (weakAreas.length > 0) {
+          recHTML +=
+            '<h4 style="margin-top: 20px;">⚠️ Bereiche mit Verbesserungsbedarf:</h4>';
+          weakAreas.slice(0, 5).forEach((area) => {
+            recHTML += `
+                <div class="stats-item">
+                    <span class="stats-label">${analytics.getCategoryName(
+                      area.category
+                    )} - ${analytics.getDifficultyName(area.difficulty)}</span>
+                    <span class="stats-value">${area.accuracy}% (${
+              area.attempts
+            } Versuche)</span>
+                </div>
+            `;
+          });
+        }
+
+        if (analytics.overallStats.totalSessions === 0) {
+          recHTML =
+            "<p>Starten Sie zunächst einige Übungssitzungen, um personalisierte Empfehlungen zu erhalten.</p>";
+        }
+
+        const trainingRecommendationsElement = document.getElementById(
+          "trainingRecommendations"
+        );
+        if (trainingRecommendationsElement)
+          trainingRecommendationsElement.innerHTML = recHTML;
+      }
+
+      // Training functions
+      function startWeaknessTraining() {
+        const weakAreas = analytics.getWeakestAreas();
+        if (weakAreas.length === 0) {
+          showStatus(
+            "Keine spezifischen Schwachstellen gefunden. Starten Sie gemischtes Training.",
+            "info"
+          );
+          startMixedTraining();
+          return;
+        }
+
+        const targetArea = weakAreas[0];
+        const targetExercises = exercises.filter(
+          (ex) =>
+            ex.category === targetArea.category &&
+            ex.difficulty === targetArea.difficulty
+        );
+
+        if (targetExercises.length === 0) {
+          showStatus("Keine Übungen für diesen Bereich gefunden.", "error");
+          return;
+        }
+
+        currentExercises = [];
+        while (currentExercises.length < 25 && targetExercises.length > 0) {
+          const remaining = 25 - currentExercises.length;
+          const toAdd = targetExercises.slice(
+            0,
+            Math.min(remaining, targetExercises.length)
+          );
+          currentExercises = currentExercises.concat(toAdd);
+        }
+
+        startCustomSession(
+          `Schwachstellen-Training: ${analytics.getCategoryName(
+            targetArea.category
+          )} (${analytics.getDifficultyName(targetArea.difficulty)})`
+        );
+      }
+
+      function startMixedTraining() {
+        const shuffled = [...exercises].sort(() => 0.5 - Math.random());
+        currentExercises = shuffled.slice(0, Math.min(25, exercises.length));
+        startCustomSession("Gemischtes Training");
+      }
+
+      function startProgressiveTraining() {
+        const basic = exercises
+          .filter((ex) => ex.difficulty === "basic")
+          .slice(0, 8);
+        const intermediate = exercises
+          .filter((ex) => ex.difficulty === "intermediate")
+          .slice(0, 10);
+        const advanced = exercises
+          .filter((ex) => ex.difficulty === "advanced")
+          .slice(0, 7);
+
+        currentExercises = [...basic, ...intermediate, ...advanced];
+        startCustomSession(
+          "Progressives Training (Grundstufe → Fortgeschritten)"
+        );
+      }
+
+      function startCustomSession(sessionName) {
+        currentSession = {
+          name: sessionName,
+          exercises: currentExercises.map((ex) => ({
+            id: ex.id,
+            category: ex.category,
+            difficulty: ex.difficulty,
+            question: ex.question,
+            answered: false,
+            correct: false,
+            userAnswer: "",
+            correctAnswer: ex.answers.join(" / "),
+          })),
+          startTime: new Date(),
+          totalQuestions: currentExercises.length,
+          correctAnswers: 0,
+        };
+
+        userAnswers = {};
+        checkedAnswers = {};
+        displayExercises();
+        switchTab("practice");
+        showStatus(
+          `${sessionName} gestartet! ${currentExercises.length} Fragen.`,
+          "success"
+        );
+      }
+
+      // File loading functions
+      function loadExternalFile() {
+        const fileInput = document.getElementById("fileInput");
+        if (!fileInput) return;
+
+        const file = fileInput.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          try {
+            const data = JSON.parse(e.target.result);
+            let newExercises = [];
+
+            if (Array.isArray(data)) {
+              newExercises = data;
+            } else if (data.exercises && Array.isArray(data.exercises)) {
+              newExercises = data.exercises;
+            } else {
+              throw new Error(
+                "Invalid format - expected array or object with exercises property"
+              );
+            }
+
+            exercises = [...exercises, ...newExercises];
+            updateWelcomeMessage();
+
+            showStatus(
+              `✅ ${newExercises.length} neue Übungen erfolgreich geladen! Gesamt: ${exercises.length} Übungen verfügbar.`,
+              "success"
+            );
+            fileInput.value = "";
+          } catch (error) {
+            showStatus(
+              "❌ Fehler beim Laden der Datei. Bitte überprüfen Sie das JSON-Format.",
+              "error"
+            );
+            console.error("Error loading file:", error);
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      // Data export functions
+      function exportAllData() {
+        const exportData = {
+          timestamp: new Date().toISOString(),
+          sessionHistory: analytics.sessionHistory,
+          overallStats: analytics.overallStats,
+          weaknessData: analytics.weaknessData,
+          exerciseDatabase: exercises.length,
+          version: "1.0",
+        };
+
+        const dataStr =
+          "data:text/json;charset=utf-8," +
+          encodeURIComponent(JSON.stringify(exportData, null, 2));
+        const downloadAnchorNode = document.createElement("a");
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute(
+          "download",
+          `deutsch_lerndaten_${new Date().toISOString().split("T")[0]}.json`
+        );
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+
+        showStatus("Alle Lerndaten erfolgreich exportiert!", "success");
+      }
+
+      function exportDetailedAnalysis() {
+        const analysis = {
+          timestamp: new Date().toISOString(),
+          overallPerformance: analytics.overallStats,
+          weakestAreas: analytics.getWeakestAreas(),
+          strongestAreas: analytics.getStrongestAreas(),
+          recommendations: analytics.generateRecommendations(),
+          sessionSummary: analytics.sessionHistory.slice(-10),
+          learningTrends: analytics.overallStats.improvementTrend,
+        };
+
+        const dataStr =
+          "data:text/json;charset=utf-8," +
+          encodeURIComponent(JSON.stringify(analysis, null, 2));
+        const downloadAnchorNode = document.createElement("a");
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute(
+          "download",
+          `deutsch_detailanalyse_${new Date().toISOString().split("T")[0]}.json`
+        );
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+
+        showStatus("Detailierte Analyse exportiert!", "success");
+      }
+
+      function clearAllData() {
+        if (
+          confirm(
+            "⚠️ ACHTUNG: Alle Lerndaten werden unwiderruflich gelöscht!\\n\\nMöchten Sie wirklich alle Fortschrittsdaten löschen?"
+          )
+        ) {
+          analytics.clearAllData();
+          currentSession = null;
+          currentExercises = [];
+          userAnswers = {};
+          checkedAnswers = {};
+
+          const exerciseContainer =
+            document.getElementById("exerciseContainer");
+          if (exerciseContainer) {
+            exerciseContainer.innerHTML = `
+                <div style="text-align: center; padding: 40px; color: #666;">
+                    <h3>Alle Daten gelöscht</h3>
+                    <p>Starten Sie eine neue Sitzung um wieder zu beginnen.</p>
+                </div>
+            `;
+          }
+
+          const scoreElement = document.getElementById("score");
+          const progressElement = document.getElementById("progressFill");
+
+          if (scoreElement)
+            scoreElement.textContent = "Richtige Antworten: 0/0";
+          if (progressElement) progressElement.style.width = "0%";
+
+          switchTab("practice");
+          showStatus("Alle Lerndaten wurden gelöscht!", "success");
+        }
+      }
+
+      // Utility functions
+      function showStatus(message, type = "info") {
+        const status = document.getElementById("status");
+        if (!status) return;
+
+        status.textContent = message;
+        status.className = `status ${type}`;
+        status.style.display = "block";
+        setTimeout(() => {
+          status.style.display = "none";
+        }, 4000);
+      }
+
+      // Keyboard shortcuts
+      document.addEventListener("keydown", function (e) {
+        if (e.ctrlKey && e.key === "Enter") {
+          for (let i = 0; i < currentExercises.length; i++) {
+            if (!checkedAnswers[i]) {
+              checkAnswer(i);
+              break;
+            }
+          }
+        }
+
+        if (e.ctrlKey && e.key === "n") {
+          e.preventDefault();
+          startNewSession();
+        }
+
+        if (e.ctrlKey && e.key === "r") {
+          e.preventDefault();
+          const practiceTab = document.querySelector(
+            "[onclick=\"switchTab('practice')\"]"
+          );
+          if (practiceTab && practiceTab.classList.contains("active")) {
+            resetSession();
+          }
+        }
+      });
+
+      // Auto-save progress
+      setInterval(() => {
+        if (currentSession) {
+          currentSession.exercises.forEach((ex, index) => {
+            if (checkedAnswers[index]) {
+              ex.answered = true;
+              const feedback = document.getElementById(`feedback${index}`);
+              ex.correct = feedback?.classList.contains("correct") || false;
+            }
+          });
+
+          localStorage.setItem(
+            "germanCurrentSession",
+            JSON.stringify(currentSession)
+          );
+        }
+      }, 30000);
+
+      // Load interrupted session
+      window.addEventListener("load", () => {
+        const savedSession = localStorage.getItem("germanCurrentSession");
+        if (savedSession && !currentSession) {
+          try {
+            const session = JSON.parse(savedSession);
+            const timeDiff = new Date() - new Date(session.startTime);
+
+            if (timeDiff < 4 * 60 * 60 * 1000) {
+              // 4 hours
+              if (
+                confirm(
+                  "Es wurde eine unterbrochene Sitzung gefunden. Möchten Sie diese fortsetzen?"
+                )
+              ) {
+                currentSession = session;
+                currentExercises = exercises.filter((ex) =>
+                  session.exercises.some((se) => se.id === ex.id)
+                );
+
+                session.exercises.forEach((ex, index) => {
+                  if (ex.answered) {
+                    checkedAnswers[index] = true;
+                    if (ex.userAnswer) {
+                      userAnswers[index] = ex.userAnswer.split(" / ");
+                    }
+                  }
+                });
+
+                displayExercises();
+                showStatus(
+                  "Unterbrochene Sitzung wiederhergestellt!",
+                  "success"
+                );
+              } else {
+                localStorage.removeItem("germanCurrentSession");
+              }
+            } else {
+              localStorage.removeItem("germanCurrentSession");
+            }
+          } catch (error) {
+            localStorage.removeItem("germanCurrentSession");
+          }
+        }
+      });
+
+      // Enhanced error handling
+      window.onerror = function (msg, url, lineNo, columnNo, error) {
+        console.error("Application error:", msg, error);
+        showStatus(
+          "Ein Fehler ist aufgetreten. Bitte laden Sie die Seite neu.",
+          "error"
+        );
+        return false;
+      };
+
+      // Initialize the application when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        init();
+      });
+    </script>
+  </body>
+</html>
