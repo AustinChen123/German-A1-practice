@@ -798,10 +798,10 @@
           difficulty: "basic",
           type: "fill",
           question: "Nach welchem Kasus fragen Sie?",
-          template: "Ich gehe zu ___ Arzt. (der Arzt)",
-          answers: ["dem"],
+          template: "Ich gehe ___ Arzt. (der Arzt)",
+          answers: ["zum"],
           explanation:
-            "Explanation: 'zu' requires Dativ. 'der Arzt' → 'dem Arzt'.",
+            "Explanation: 'zu' + dem = 'zum'. In everyday German, we use the contraction 'zum Arzt' instead of 'zu dem Arzt'.",
         },
         {
           id: 17,
@@ -1500,7 +1500,12 @@
       function updateScore() {
         const totalQuestions = currentExercises.length;
         const checkedCount = Object.keys(checkedAnswers).length;
-        const correctCount = currentSession ? currentSession.correctAnswers : 0;
+        const correctCount = currentSession
+          ? Object.keys(checkedAnswers).filter((index) => {
+              const feedback = document.getElementById(`feedback${index}`);
+              return feedback?.classList.contains("correct");
+            }).length
+          : 0;
 
         const scoreElement = document.getElementById("score");
         const progressElement = document.getElementById("progressFill");
@@ -1534,7 +1539,6 @@
             ex.answered = true;
             const feedback = document.getElementById(`feedback${index}`);
             ex.correct = feedback?.classList.contains("correct") || false;
-            if (ex.correct) currentSession.correctAnswers++;
           }
         });
 

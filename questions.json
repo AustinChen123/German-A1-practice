@@ -1026,6 +1026,1144 @@
       "template": "Ihr ___ früh ins Bett gehen. (sollen)",
       "answers": ["sollt"],
       "explanation": "Explanation: 'sollen' for 'ihr' is 'sollt'."
+    },
+    {
+      "id": 201,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Ergänzen Sie den Artikel:",
+      "template": "___ Tür ist zu.",
+      "answers": ["die"],
+      "explanation": "Explanation: 'Tür' is feminine → die Tür."
+    },
+    {
+      "id": 202,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Welcher Artikel passt?",
+      "template": "___ Berg ist hoch.",
+      "answers": ["der"],
+      "explanation": "Explanation: 'Berg' is masculine → der Berg."
+    },
+    {
+      "id": 203,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Bestimmter Artikel:",
+      "template": "___ Meer ist blau.",
+      "choices": ["Der", "Die", "Das", "Den"],
+      "answers": ["das"],
+      "explanation": "Explanation: 'Meer' is neuter → das Meer."
+    },
+    {
+      "id": 204,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Kontraktion verwenden:",
+      "template": "Ich gehe ___ Park. (zu + der Park)",
+      "answers": ["zum"],
+      "explanation": "Explanation: 'zu' + 'dem' = 'zum'. Standard contraction in German."
+    },
+    {
+      "id": 205,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Ergänzen Sie:",
+      "template": "___ Sofa ist bequem.",
+      "answers": ["das"],
+      "explanation": "Explanation: 'Sofa' is neuter → das Sofa."
+    },
+    {
+      "id": 206,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Artikel im Akkusativ:",
+      "template": "Wir kaufen ___ Lampe. (die Lampe)",
+      "answers": ["die"],
+      "explanation": "Explanation: Feminine articles don't change in Akkusativ."
+    },
+    {
+      "id": 207,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Unbestimmter Artikel:",
+      "template": "Das ist ___ Stuhl.",
+      "answers": ["ein"],
+      "explanation": "Explanation: 'der Stuhl' (masculine) → 'ein Stuhl'."
+    },
+    {
+      "id": 208,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Kontraktion:",
+      "template": "Das Buch liegt ___ Regal.",
+      "choices": ["in das", "ins", "in dem", "im"],
+      "answers": ["im"],
+      "explanation": "Explanation: 'in' + 'dem' = 'im'. The book is already on the shelf (location)."
+    },
+    {
+      "id": 209,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Artikel ergänzen:",
+      "template": "___ Küche ist klein.",
+      "answers": ["die"],
+      "explanation": "Explanation: 'Küche' is feminine → die Küche."
+    },
+    {
+      "id": 210,
+      "category": "artikel",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Genitiv-Artikel:",
+      "template": "Das Zimmer ___ Kindes ist sauber. (das Kind)",
+      "answers": ["des"],
+      "explanation": "Explanation: Genitive neuter: 'das Kind' → 'des Kindes'."
+    },
+    {
+      "id": 211,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Ergänzen Sie:",
+      "template": "___ Uhr zeigt drei.",
+      "answers": ["die"],
+      "explanation": "Explanation: 'Uhr' is feminine → die Uhr."
+    },
+    {
+      "id": 212,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Bestimmter Artikel:",
+      "template": "___ Heft liegt hier.",
+      "answers": ["das"],
+      "explanation": "Explanation: 'Heft' is neuter → das Heft."
+    },
+    {
+      "id": 213,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Artikel im Dativ:",
+      "template": "Sie schreibt mit ___ Stift. (der Stift)",
+      "answers": ["dem"],
+      "explanation": "Explanation: 'mit' + Dativ: 'der Stift' → 'dem Stift'."
+    },
+    {
+      "id": 214,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Welcher Artikel?",
+      "template": "___ Computer ist neu.",
+      "choices": ["Der", "Die", "Das", "Den"],
+      "answers": ["der"],
+      "explanation": "Explanation: 'Computer' is masculine → der Computer."
+    },
+    {
+      "id": 215,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Artikel ergänzen:",
+      "template": "___ Tisch ist rund.",
+      "answers": ["der"],
+      "explanation": "Explanation: 'Tisch' is masculine → der Tisch."
+    },
+    {
+      "id": 216,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Unbestimmter Artikel im Akkusativ:",
+      "template": "Er braucht ___ neue Brille.",
+      "answers": ["eine"],
+      "explanation": "Explanation: 'die Brille' (feminine) in Akkusativ → 'eine Brille'."
+    },
+    {
+      "id": 217,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Ergänzen Sie:",
+      "template": "___ Handy klingelt.",
+      "answers": ["das"],
+      "explanation": "Explanation: 'Handy' is neuter → das Handy."
+    },
+    {
+      "id": 218,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Kontraktion verwenden:",
+      "template": "Wir fahren ___ Bahnhof.",
+      "choices": ["zu dem", "zum", "an das", "ans"],
+      "answers": ["zum"],
+      "explanation": "Explanation: 'zu' + 'dem' = 'zum Bahnhof'."
+    },
+    {
+      "id": 219,
+      "category": "artikel",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Bestimmter Artikel:",
+      "template": "___ Schuhe sind dreckig.",
+      "answers": ["die"],
+      "explanation": "Explanation: 'Schuhe' is plural → die Schuhe."
+    },
+    {
+      "id": 220,
+      "category": "artikel",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Genitiv-Form:",
+      "template": "Die Farbe ___ Autos ist rot. (das Auto)",
+      "answers": ["des"],
+      "explanation": "Explanation: Genitive neuter: 'das Auto' → 'des Autos'."
+    },
+    {
+      "id": 261,
+      "category": "kasus",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Akkusativ einsetzen:",
+      "template": "Ich kenne ___ Frau. (die Frau)",
+      "answers": ["die"],
+      "explanation": "Explanation: 'kennen' takes Akkusativ. Feminine doesn't change."
+    },
+    {
+      "id": 262,
+      "category": "kasus",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Dativ nach Verb:",
+      "template": "Das Buch gehört ___ Student. (der Student)",
+      "answers": ["dem"],
+      "explanation": "Explanation: 'gehören' requires Dativ: 'der Student' → 'dem Student'."
+    },
+    {
+      "id": 263,
+      "category": "kasus",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Welcher Kasus nach 'durch'?",
+      "template": "Wir gehen durch ___ Park.",
+      "choices": ["der", "den", "dem", "des"],
+      "answers": ["den"],
+      "explanation": "Explanation: 'durch' requires Akkusativ: 'der Park' → 'den Park'."
+    },
+    {
+      "id": 264,
+      "category": "kasus",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Akkusativ-Objekt:",
+      "template": "Sie malt ___ Bild. (das Bild)",
+      "answers": ["das"],
+      "explanation": "Explanation: 'malen' takes Akkusativ. Neuter doesn't change."
+    },
+    {
+      "id": 265,
+      "category": "kasus",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Dativ nach Präposition:",
+      "template": "Er wohnt bei ___ Eltern. (die Eltern)",
+      "answers": ["den"],
+      "explanation": "Explanation: 'bei' + Dativ: plural 'die Eltern' → 'den Eltern'."
+    },
+    {
+      "id": 266,
+      "category": "kasus",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Akkusativ einsetzen:",
+      "template": "Wir suchen ___ Hotel. (das Hotel)",
+      "answers": ["das"],
+      "explanation": "Explanation: 'suchen' takes Akkusativ. Neuter doesn't change."
+    },
+    {
+      "id": 267,
+      "category": "kasus",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Dativ nach Verb:",
+      "template": "Ich danke ___ Kellner. (der Kellner)",
+      "answers": ["dem"],
+      "explanation": "Explanation: 'danken' requires Dativ: 'der Kellner' → 'dem Kellner'."
+    },
+    {
+      "id": 268,
+      "category": "kasus",
+      "difficulty": "advanced",
+      "type": "multiple_choice",
+      "question": "Genitiv nach Präposition:",
+      "template": "Wegen ___ Wetters bleiben wir zu Hause.",
+      "choices": ["das", "dem", "den", "des"],
+      "answers": ["des"],
+      "explanation": "Explanation: 'wegen' requires Genitive: 'das Wetter' → 'des Wetters'."
+    },
+    {
+      "id": 269,
+      "category": "kasus",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Akkusativ einsetzen:",
+      "template": "Er öffnet ___ Fenster. (das Fenster)",
+      "answers": ["das"],
+      "explanation": "Explanation: 'öffnen' takes Akkusativ. Neuter doesn't change."
+    },
+    {
+      "id": 270,
+      "category": "kasus",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Dativ nach Präposition:",
+      "template": "Sie sitzt vor ___ Computer. (der Computer)",
+      "answers": ["dem"],
+      "explanation": "Explanation: 'vor' with location requires Dativ: 'der Computer' → 'dem Computer'."
+    },
+    {
+      "id": 311,
+      "category": "verben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Verb konjugieren:",
+      "template": "Du ___ gern Bücher. (lesen)",
+      "answers": ["liest"],
+      "explanation": "Explanation: 'lesen' for 'du' is 'liest' (stem change e→ie)."
+    },
+    {
+      "id": 312,
+      "category": "verben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Konjugieren Sie:",
+      "template": "Wir ___ jeden Tag. (lernen)",
+      "answers": ["lernen"],
+      "explanation": "Explanation: 'lernen' for 'wir' stays 'lernen'."
+    },
+    {
+      "id": 313,
+      "category": "verben",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Starkes Verb:",
+      "template": "Er ___ den Ball.",
+      "choices": ["wirft", "werft", "warf", "würfe"],
+      "answers": ["wirft"],
+      "explanation": "Explanation: 'werfen' for 'er' is 'wirft' (stem change e→i)."
+    },
+    {
+      "id": 314,
+      "category": "verben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Verb konjugieren:",
+      "template": "Sie ___ sehr schnell. (sprechen)",
+      "answers": ["spricht"],
+      "explanation": "Explanation: 'sprechen' for 'sie' is 'spricht' (stem change e→i)."
+    },
+    {
+      "id": 315,
+      "category": "verben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Reflexives Verb:",
+      "template": "Ich ___ mich auf den Urlaub. (freuen)",
+      "answers": ["freue"],
+      "explanation": "Explanation: 'sich freuen auf' - 'ich freue mich auf'."
+    },
+    {
+      "id": 316,
+      "category": "verben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Konjugieren Sie:",
+      "template": "Ihr ___ zu laut. (sein)",
+      "answers": ["seid"],
+      "explanation": "Explanation: 'sein' for 'ihr' is 'seid'."
+    },
+    {
+      "id": 317,
+      "category": "verben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Verb mit Präposition:",
+      "template": "Sie wartet ___ den Bus.",
+      "answers": ["auf"],
+      "explanation": "Explanation: 'warten auf' requires the preposition 'auf' + Akkusativ."
+    },
+    {
+      "id": 318,
+      "category": "verben",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Hilfsverb wählen:",
+      "template": "Ich ___ 25 Jahre alt.",
+      "choices": ["bin", "habe", "werde", "kann"],
+      "answers": ["bin"],
+      "explanation": "Explanation: For age, we use 'sein': 'Ich bin 25 Jahre alt'."
+    },
+    {
+      "id": 319,
+      "category": "verben",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Konjunktiv II:",
+      "template": "Wenn ich Zeit ___, würde ich kommen. (haben)",
+      "answers": ["hätte"],
+      "explanation": "Explanation: Konjunktiv II of 'haben' is 'hätte'."
+    },
+    {
+      "id": 320,
+      "category": "verben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Verb mit Dativ:",
+      "template": "Das Essen ___ mir sehr gut. (schmecken)",
+      "answers": ["schmeckt"],
+      "explanation": "Explanation: 'schmecken' requires Dativ: 'Das Essen schmeckt mir'."
+    },
+    {
+      "id": 361,
+      "category": "trennbar",
+      "difficulty": "basic",
+      "type": "multi_fill",
+      "question": "Trennbares Verb konjugieren:",
+      "template": "Ich ___ die Tür ___. (aufmachen)",
+      "answers": ["mache", "auf"],
+      "explanation": "Explanation: 'aufmachen' splits: 'Ich mache ... auf'."
+    },
+    {
+      "id": 362,
+      "category": "trennbar",
+      "difficulty": "basic",
+      "type": "multi_fill",
+      "question": "Konjugieren Sie:",
+      "template": "Der Zug ___ um 8 Uhr ___. (ankommen)",
+      "answers": ["kommt", "an"],
+      "explanation": "Explanation: 'ankommen' splits: 'Der Zug kommt ... an'."
+    },
+    {
+      "id": 363,
+      "category": "trennbar",
+      "difficulty": "intermediate",
+      "type": "multi_fill",
+      "question": "Trennbares Verb:",
+      "template": "Wir ___ heute ___. (einkaufen)",
+      "answers": ["kaufen", "ein"],
+      "explanation": "Explanation: 'einkaufen' splits: 'Wir kaufen ... ein'."
+    },
+    {
+      "id": 364,
+      "category": "trennbar",
+      "difficulty": "basic",
+      "type": "multi_fill",
+      "question": "Konjugieren Sie:",
+      "template": "Sie ___ das Licht ___. (anmachen)",
+      "answers": ["macht", "an"],
+      "explanation": "Explanation: 'anmachen' splits: 'Sie macht ... an'."
+    },
+    {
+      "id": 365,
+      "category": "trennbar",
+      "difficulty": "intermediate",
+      "type": "multi_fill",
+      "question": "Trennbares Verb:",
+      "template": "Du ___ morgen ___. (weggehen)",
+      "answers": ["gehst", "weg"],
+      "explanation": "Explanation: 'weggehen' splits: 'Du gehst ... weg'."
+    },
+    {
+      "id": 366,
+      "category": "trennbar",
+      "difficulty": "basic",
+      "type": "multi_fill",
+      "question": "Konjugieren Sie:",
+      "template": "Ich ___ um 7 Uhr ___. (aufwachen)",
+      "answers": ["wache", "auf"],
+      "explanation": "Explanation: 'aufwachen' splits: 'Ich wache ... auf'."
+    },
+    {
+      "id": 367,
+      "category": "trennbar",
+      "difficulty": "intermediate",
+      "type": "multi_fill",
+      "question": "Trennbares Verb:",
+      "template": "Er ___ seine Freunde ___. (einladen)",
+      "answers": ["lädt", "ein"],
+      "explanation": "Explanation: 'einladen' splits: 'Er lädt ... ein' (stem change a→ä)."
+    },
+    {
+      "id": 368,
+      "category": "trennbar",
+      "difficulty": "basic",
+      "type": "multi_fill",
+      "question": "Konjugieren Sie:",
+      "template": "Wir ___ das Fenster ___. (zumachen)",
+      "answers": ["machen", "zu"],
+      "explanation": "Explanation: 'zumachen' splits: 'Wir machen ... zu'."
+    },
+    {
+      "id": 369,
+      "category": "trennbar",
+      "difficulty": "intermediate",
+      "type": "multi_fill",
+      "question": "Trennbares Verb:",
+      "template": "Sie ___ ihre Jacke ___. (ausziehen)",
+      "answers": ["zieht", "aus"],
+      "explanation": "Explanation: 'ausziehen' splits: 'Sie zieht ... aus'."
+    },
+    {
+      "id": 370,
+      "category": "trennbar",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Infinitiv mit 'zu':",
+      "template": "Ich vergesse oft ___. (aufstehen)",
+      "answers": ["aufzustehen"],
+      "explanation": "Explanation: Separable verbs with 'zu': 'auf-zu-stehen'."
+    },
+    {
+      "id": 391,
+      "category": "perfekt",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Perfekt bilden:",
+      "template": "Ich ___ ein Buch ___. (lesen)",
+      "answers": ["habe", "gelesen"],
+      "explanation": "Explanation: 'lesen' uses 'haben': 'habe gelesen'."
+    },
+    {
+      "id": 392,
+      "category": "perfekt",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Perfekt mit 'sein':",
+      "template": "Sie ___ nach Berlin ___. (fahren)",
+      "answers": ["ist", "gefahren"],
+      "explanation": "Explanation: Movement verbs use 'sein': 'ist gefahren'."
+    },
+    {
+      "id": 393,
+      "category": "perfekt",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Welches Hilfsverb?",
+      "template": "Er ___ gestern gekommen.",
+      "choices": ["hat", "ist", "wird", "kann"],
+      "answers": ["ist"],
+      "explanation": "Explanation: 'kommen' uses 'sein': 'ist gekommen'."
+    },
+    {
+      "id": 394,
+      "category": "perfekt",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Partizip II:",
+      "template": "Wir haben Pizza ___. (essen)",
+      "answers": ["gegessen"],
+      "explanation": "Explanation: Past participle of 'essen' is 'gegessen'."
+    },
+    {
+      "id": 395,
+      "category": "perfekt",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Perfekt mit trennbarem Verb:",
+      "template": "Ich ___ um 6 Uhr ___. (aufstehen)",
+      "answers": ["bin", "aufgestanden"],
+      "explanation": "Explanation: 'aufstehen' uses 'sein': 'bin aufgestanden'."
+    },
+    {
+      "id": 396,
+      "category": "perfekt",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Perfekt bilden:",
+      "template": "Du ___ viel ___. (arbeiten)",
+      "answers": ["hast", "gearbeitet"],
+      "explanation": "Explanation: Regular verb: 'hast gearbeitet'."
+    },
+    {
+      "id": 397,
+      "category": "perfekt",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Starkes Verb im Perfekt:",
+      "template": "Sie ___ ein Lied ___. (singen)",
+      "answers": ["hat", "gesungen"],
+      "explanation": "Explanation: 'singen' → 'hat gesungen' (strong verb)."
+    },
+    {
+      "id": 398,
+      "category": "perfekt",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Perfekt von 'sein':",
+      "template": "Wir ___ müde ___.",
+      "choices": [
+        "haben gewesen",
+        "sind gewesen",
+        "haben geseint",
+        "sind geseint"
+      ],
+      "answers": ["sind gewesen"],
+      "explanation": "Explanation: 'sein' in perfect: 'sind gewesen'."
+    },
+    {
+      "id": 399,
+      "category": "perfekt",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Perfekt mit Modalverb:",
+      "template": "Ich ___ gestern arbeiten ___. (müssen)",
+      "answers": ["habe", "müssen"],
+      "explanation": "Explanation: Modal verbs in perfect use double infinitive."
+    },
+    {
+      "id": 400,
+      "category": "perfekt",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Perfekt mit Bewegung:",
+      "template": "Ihr ___ schnell ___. (laufen)",
+      "answers": ["seid", "gelaufen"],
+      "explanation": "Explanation: 'laufen' (movement) uses 'sein': 'seid gelaufen'."
+    },
+    {
+      "id": 431,
+      "category": "plural",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Plural bilden:",
+      "template": "das Buch → die ___",
+      "answers": ["bücher"],
+      "explanation": "Explanation: 'Buch' → 'Bücher' (umlaut + -er)."
+    },
+    {
+      "id": 432,
+      "category": "plural",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Plural-Form:",
+      "template": "die Frau → die ___",
+      "answers": ["frauen"],
+      "explanation": "Explanation: 'Frau' → 'Frauen' (add -en)."
+    },
+    {
+      "id": 433,
+      "category": "plural",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Welcher Plural?",
+      "template": "der Mann → die ___",
+      "choices": ["Männe", "Männer", "Mannen", "Mäne"],
+      "answers": ["männer"],
+      "explanation": "Explanation: 'Mann' → 'Männer' (umlaut + -er)."
+    },
+    {
+      "id": 434,
+      "category": "plural",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Plural bilden:",
+      "template": "das Auto → die ___",
+      "answers": ["autos"],
+      "explanation": "Explanation: 'Auto' → 'Autos' (add -s, foreign word)."
+    },
+    {
+      "id": 435,
+      "category": "plural",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Plural-Form:",
+      "template": "das Museum → die ___",
+      "answers": ["museen"],
+      "explanation": "Explanation: 'Museum' → 'Museen' (Latin origin, -um → -en)."
+    },
+    {
+      "id": 436,
+      "category": "plural",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Plural bilden:",
+      "template": "der Hund → die ___",
+      "answers": ["hunde"],
+      "explanation": "Explanation: 'Hund' → 'Hunde' (add -e)."
+    },
+    {
+      "id": 437,
+      "category": "plural",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Unregelmäßiger Plural:",
+      "template": "das Kind → die ___",
+      "answers": ["kinder"],
+      "explanation": "Explanation: 'Kind' → 'Kinder' (add -er)."
+    },
+    {
+      "id": 438,
+      "category": "plural",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Plural wählen:",
+      "template": "die Lampe → die ___",
+      "choices": ["Lampen", "Lampes", "Lämpfe", "Lamper"],
+      "answers": ["lampen"],
+      "explanation": "Explanation: 'Lampe' → 'Lampen' (add -n)."
+    },
+    {
+      "id": 439,
+      "category": "plural",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Plural mit Umlaut:",
+      "template": "der Stuhl → die ___",
+      "answers": ["stühle"],
+      "explanation": "Explanation: 'Stuhl' → 'Stühle' (umlaut + -e)."
+    },
+    {
+      "id": 440,
+      "category": "plural",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Kein Plural-Unterschied:",
+      "template": "der Lehrer → die ___",
+      "answers": ["lehrer"],
+      "explanation": "Explanation: 'Lehrer' stays 'Lehrer' in plural (-er ending, no change)."
+    },
+    {
+      "id": 471,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Modalverb einsetzen:",
+      "template": "Ich ___ heute nicht kommen. (können - negativ)",
+      "answers": ["kann"],
+      "explanation": "Explanation: 'können' for 'ich' is 'kann' (ich kann nicht kommen)."
+    },
+    {
+      "id": 472,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Modalverb konjugieren:",
+      "template": "Du ___ pünktlich da sein. (sollen)",
+      "answers": ["sollst"],
+      "explanation": "Explanation: 'sollen' for 'du' is 'sollst'."
+    },
+    {
+      "id": 473,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Höfliche Form:",
+      "template": "___ ich Sie etwas fragen?",
+      "choices": ["Darf", "Dürfte", "Kann", "Könnte"],
+      "answers": ["dürfte"],
+      "explanation": "Explanation: 'Dürfte' is the most polite form for asking permission."
+    },
+    {
+      "id": 474,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Modalverb einsetzen:",
+      "template": "Wir ___ heute Abend ins Kino gehen. (wollen)",
+      "answers": ["wollen"],
+      "explanation": "Explanation: 'wollen' for 'wir' stays 'wollen'."
+    },
+    {
+      "id": 475,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Modalverb für Notwendigkeit:",
+      "template": "Sie ___ zum Arzt gehen. (müssen)",
+      "answers": ["muss"],
+      "explanation": "Explanation: 'müssen' for 'sie' is 'muss'."
+    },
+    {
+      "id": 476,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Modalverb konjugieren:",
+      "template": "Ihr ___ lauter sprechen. (müssen)",
+      "answers": ["müsst"],
+      "explanation": "Explanation: 'müssen' for 'ihr' is 'müsst'."
+    },
+    {
+      "id": 477,
+      "category": "modalverben",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Subjektive Bedeutung:",
+      "template": "Das ___ stimmen. (müssen - Vermutung)",
+      "answers": ["muss"],
+      "explanation": "Explanation: 'müssen' can express strong assumption: 'That must be true'."
+    },
+    {
+      "id": 478,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Erlaubnis verweigern:",
+      "template": "Du ___ hier nicht parken.",
+      "choices": ["darfst", "kannst", "sollst", "musst"],
+      "answers": ["darfst"],
+      "explanation": "Explanation: 'dürfen' (negative) expresses prohibition: 'darfst nicht'."
+    },
+    {
+      "id": 479,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Wunsch ausdrücken:",
+      "template": "Ich ___ gerne Urlaub machen. (mögen)",
+      "answers": ["möchte"],
+      "explanation": "Explanation: 'möchte' expresses polite wish: 'I would like to'."
+    },
+    {
+      "id": 480,
+      "category": "modalverben",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Modalverb + Passiv:",
+      "template": "Die Arbeit ___ heute fertig ___ werden. (sollen)",
+      "answers": ["soll", "gemacht"],
+      "explanation": "Explanation: Modal + passive: 'soll gemacht werden'."
+    },
+    {
+      "id": 481,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Fähigkeit ausdrücken:",
+      "template": "Er ___ sehr gut Klavier spielen. (können)",
+      "answers": ["kann"],
+      "explanation": "Explanation: 'können' expresses ability: 'He can play piano well'."
+    },
+    {
+      "id": 482,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Modalverb verneinen:",
+      "template": "Ich ___ heute nicht arbeiten. (müssen)",
+      "answers": ["muss"],
+      "explanation": "Explanation: 'müssen' + 'nicht' = 'don't have to': 'muss nicht'."
+    },
+    {
+      "id": 483,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Rat geben:",
+      "template": "Du ___ mehr Sport machen.",
+      "choices": ["solltest", "könntest", "müsstest", "dürftest"],
+      "answers": ["solltest"],
+      "explanation": "Explanation: 'solltest' (Konjunktiv) gives friendly advice."
+    },
+    {
+      "id": 484,
+      "category": "modalverben",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Modalverb im Präteritum:",
+      "template": "Ich ___ gestern nicht kommen. (können)",
+      "answers": ["konnte"],
+      "explanation": "Explanation: Past tense of 'können' is 'konnte'."
+    },
+    {
+      "id": 485,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Erlaubnis erfragen:",
+      "template": "___ ich das Fenster öffnen? (dürfen)",
+      "answers": ["darf"],
+      "explanation": "Explanation: 'dürfen' asks for permission: 'Darf ich?'"
+    },
+    {
+      "id": 486,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Modalverb + trennbares Verb:",
+      "template": "Wir ___ früh ___. (müssen + aufstehen)",
+      "answers": ["müssen", "aufstehen"],
+      "explanation": "Explanation: Modal + separable verb in infinitive: 'müssen aufstehen'."
+    },
+    {
+      "id": 487,
+      "category": "modalverben",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Vermutung ausdrücken:",
+      "template": "Sie ___ schon zu Hause sein. (müssen)",
+      "answers": ["müsste"],
+      "explanation": "Explanation: 'müsste' (Konjunktiv) expresses assumption: 'She should be home'."
+    },
+    {
+      "id": 488,
+      "category": "modalverben",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Absicht ausdrücken:",
+      "template": "Ich ___ Deutsch lernen.",
+      "choices": ["will", "soll", "darf", "kann"],
+      "answers": ["will"],
+      "explanation": "Explanation: 'wollen' expresses intention: 'I want to learn German'."
+    },
+    {
+      "id": 489,
+      "category": "modalverben",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Notwendigkeit verneinen:",
+      "template": "Du ___ nicht so früh kommen. (müssen)",
+      "answers": ["musst"],
+      "explanation": "Explanation: 'musst nicht' = 'don't have to' (no necessity)."
+    },
+    {
+      "id": 490,
+      "category": "modalverben",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Modalverb objektiv:",
+      "template": "Das Paket ___ heute ankommen. (sollen)",
+      "answers": ["soll"],
+      "explanation": "Explanation: 'sollen' can mean 'supposed to': 'The package is supposed to arrive'."
+    },
+
+    {
+      "id": 491,
+      "category": "possessiv",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Possessivpronomen:",
+      "template": "Das ist ___ Bruder. (ich)",
+      "answers": ["mein"],
+      "explanation": "Explanation: 'ich' → 'mein'. Masculine: 'mein Bruder'."
+    },
+    {
+      "id": 492,
+      "category": "possessiv",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Ergänzen Sie:",
+      "template": "___ Schwester ist nett. (du)",
+      "answers": ["deine"],
+      "explanation": "Explanation: 'du' → 'dein'. Feminine: 'deine Schwester'."
+    },
+    {
+      "id": 493,
+      "category": "possessiv",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Possessiv im Akkusativ:",
+      "template": "Ich kenne ___ Vater gut.",
+      "choices": ["ihr", "ihren", "ihre", "ihrem"],
+      "answers": ["ihren"],
+      "explanation": "Explanation: Akkusativ masculine: 'ihr Vater' → 'ihren Vater'."
+    },
+    {
+      "id": 494,
+      "category": "possessiv",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Possessivpronomen:",
+      "template": "Wo sind ___ Schlüssel? (wir)",
+      "answers": ["unsere"],
+      "explanation": "Explanation: 'wir' → 'unser'. Plural: 'unsere Schlüssel'."
+    },
+    {
+      "id": 495,
+      "category": "possessiv",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Possessiv im Dativ:",
+      "template": "Ich helfe ___ Mutter. (meine)",
+      "answers": ["meiner"],
+      "explanation": "Explanation: Dativ feminine: 'meine Mutter' → 'meiner Mutter'."
+    },
+    {
+      "id": 496,
+      "category": "possessiv",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Ergänzen Sie:",
+      "template": "___ Auto ist kaputt. (sie - plural)",
+      "answers": ["ihr"],
+      "explanation": "Explanation: 'sie' (plural) → 'ihr'. Neuter: 'ihr Auto'."
+    },
+    {
+      "id": 497,
+      "category": "possessiv",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Possessiv im Genitiv:",
+      "template": "Das Buch ___ Tochter liegt hier. (seine)",
+      "answers": ["seiner"],
+      "explanation": "Explanation: Genitive feminine: 'seine Tochter' → 'seiner Tochter'."
+    },
+    {
+      "id": 498,
+      "category": "possessiv",
+      "difficulty": "basic",
+      "type": "multiple_choice",
+      "question": "Welches Possessivpronomen?",
+      "template": "___ Name ist Maria. (sie - singular)",
+      "choices": ["ihr", "ihre", "ihren", "ihrem"],
+      "answers": ["ihr"],
+      "explanation": "Explanation: 'sie' (singular) → 'ihr'. Masculine: 'ihr Name'."
+    },
+    {
+      "id": 499,
+      "category": "possessiv",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Possessiv im Akkusativ:",
+      "template": "Sie kauft ___ neues Kleid. (ihr)",
+      "answers": ["ihr"],
+      "explanation": "Explanation: Akkusativ neuter: 'ihr Kleid' stays 'ihr neues Kleid'."
+    },
+    {
+      "id": 500,
+      "category": "possessiv",
+      "difficulty": "basic",
+      "type": "fill",
+      "question": "Possessivpronomen:",
+      "template": "Ist das ___ Buch? (Sie - formal)",
+      "answers": ["ihr"],
+      "explanation": "Explanation: Formal 'Sie' → 'Ihr'. Neuter: 'Ihr Buch'."
+    },
+    {
+      "id": 301,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Präposition + Artikel (Kontraktion):",
+      "template": "Ich gehe ___ Supermarkt. (zu + der Supermarkt)",
+      "answers": ["zum"],
+      "explanation": "Explanation: 'zu' + 'dem' = 'zum'. This contraction is mandatory in standard German."
+    },
+    {
+      "id": 302,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Präposition + Artikel (Kontraktion):",
+      "template": "Das Buch liegt ___ Tisch. (auf + der Tisch)",
+      "answers": ["auf dem"],
+      "explanation": "Explanation: 'auf' + 'dem' doesn't contract. Use the full form 'auf dem Tisch'."
+    },
+    {
+      "id": 303,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Welche Form ist richtig?",
+      "template": "Wir gehen ___ Kino.",
+      "choices": ["in das", "ins", "zu dem", "zum"],
+      "answers": ["ins"],
+      "explanation": "Explanation: 'in' + 'das' = 'ins'. The contraction is preferred in everyday German."
+    },
+    {
+      "id": 304,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Präposition + Artikel (Kontraktion):",
+      "template": "Sie kommt ___ Schule. (von + die Schule)",
+      "answers": ["von der"],
+      "explanation": "Explanation: 'von' + 'der' doesn't contract. Use the full form 'von der Schule'."
+    },
+    {
+      "id": 305,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Präposition + Artikel (Kontraktion):",
+      "template": "Das Auto steht ___ Haus. (vor + das Haus)",
+      "answers": ["vor dem"],
+      "explanation": "Explanation: 'vor' + 'dem' doesn't contract. Use the full form 'vor dem Haus'."
+    },
+    {
+      "id": 306,
+      "category": "artikel",
+      "difficulty": "advanced",
+      "type": "multiple_choice",
+      "question": "Richtige Kontraktion:",
+      "template": "Er kommt ___ Bahnhof.",
+      "choices": ["von dem", "vom", "zu der", "zur"],
+      "answers": ["vom"],
+      "explanation": "Explanation: 'von' + 'dem' = 'vom'. This contraction is standard in German."
+    },
+    {
+      "id": 521,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Kontraktion verwenden:",
+      "template": "Wir gehen ___ Strand. (an + der Strand)",
+      "answers": ["an den"],
+      "explanation": "Explanation: 'an' + 'den' doesn't contract. Use full form 'an den Strand'."
+    },
+    {
+      "id": 522,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Richtige Kontraktion:",
+      "template": "Das Kind spielt ___ Garten.",
+      "choices": ["in dem", "im", "in das", "ins"],
+      "answers": ["im"],
+      "explanation": "Explanation: Location uses Dativ: 'in' + 'dem' = 'im Garten'."
+    },
+    {
+      "id": 523,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "fill",
+      "question": "Kontraktion mit Bewegung:",
+      "template": "Sie geht ___ Geschäft. (in + das Geschäft)",
+      "answers": ["ins"],
+      "explanation": "Explanation: Movement into: 'in' + 'das' = 'ins Geschäft'."
+    },
+    {
+      "id": 524,
+      "category": "artikel",
+      "difficulty": "advanced",
+      "type": "fill",
+      "question": "Kontraktion oder nicht?:",
+      "template": "Er wartet ___ Bushaltestelle. (an + die Bushaltestelle)",
+      "answers": ["an der"],
+      "explanation": "Explanation: 'an' + 'der' doesn't contract. Use 'an der Bushaltestelle'."
+    },
+    {
+      "id": 525,
+      "category": "artikel",
+      "difficulty": "intermediate",
+      "type": "multiple_choice",
+      "question": "Präposition + Artikel:",
+      "template": "Das Bild hängt ___ Wand.",
+      "choices": ["an der", "an die", "ans", "am"],
+      "answers": ["an der"],
+      "explanation": "Explanation: Location: 'an' + 'der' = 'an der Wand' (no contraction)."
     }
   ],
   "categories": {
@@ -1044,14 +2182,14 @@
     "advanced": "A1.3 - Advanced A1 / transition to A2"
   },
   "statistics": {
-    "artikel": 40,
-    "kasus": 20,
-    "verben": 20,
-    "possessiv": 10,
-    "modalverben": 10,
-    "trennbar": 20,
-    "perfekt": 40,
-    "plural": 40
+    "artikel": 100,
+    "kasus": 70,
+    "verben": 70,
+    "possessiv": 40,
+    "modalverben": 30,
+    "trennbar": 50,
+    "perfekt": 80,
+    "plural": 80
   },
   "instructions": {
     "file_format": "Save this as .json file and load it using the '📁 Datei laden' button",
